@@ -1,0 +1,86 @@
+{
+  "model_type": "RandomForestClassifier with StandardScaler Pipeline",
+  "n_estimators": 100,
+  "features": [
+    "Matches",
+    "Innings",
+    "Runs",
+    "Highest_Score",
+    "Batting_Average",
+    "Strike_Rate",
+    "Centuries",
+    "Fifties",
+    "Wickets",
+    "Bowling_Average",
+    "Economy_Rate",
+    "Bowling_Strike_Rate",
+    "Catches",
+    "Stumpings"
+  ],
+  "classes": [
+    "Developing",
+    "Elite",
+    "High_Impact"
+  ],
+  "metrics": {
+    "cv_accuracy_mean": 0.8512,
+    "cv_accuracy_std": 0.0622,
+    "test_accuracy": 1.0,
+    "weighted_f1_score": 1.0,
+    "detailed_report": {
+      "Developing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "Elite": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 13.0
+      },
+      "High_Impact": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 13.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 27.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 27.0
+      }
+    }
+  },
+  "feature_importances": {
+    "Matches": 0.2027,
+    "Wickets": 0.1421,
+    "Innings": 0.1285,
+    "Catches": 0.1047,
+    "Batting_Average": 0.0858,
+    "Runs": 0.0498,
+    "Bowling_Strike_Rate": 0.0478,
+    "Bowling_Average": 0.0417,
+    "Fifties": 0.0404,
+    "Economy_Rate": 0.0395,
+    "Highest_Score": 0.0353,
+    "Strike_Rate": 0.0317,
+    "Stumpings": 0.0298,
+    "Centuries": 0.0203
+  },
+  "limitations": [
+    "Historical stats do not capture match conditions, pitch behavior, or atmospheric factors.",
+    "Aggregate metrics aggregate across formats (Test/ODI/T20) unless segregated.",
+    "Player form and recent injury status are dynamic and cannot be guaranteed by static career numbers.",
+    "Statistical classification provides a scouting guide, not an absolute guarantee of future match outcomes."
+  ]
+}
